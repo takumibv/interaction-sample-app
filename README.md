@@ -1,4 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+アニメーションサンプルサイト
+
+使用フレームワーク・プラグイン
+- [Next.js](https://nextjs.org/)
+- [Framer Motion](https://www.framer.com/developers/)
+- [headless UI](https://headlessui.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
