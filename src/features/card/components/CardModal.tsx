@@ -36,6 +36,7 @@ const CardModal = memo(function CardModal({
       open={isOpen}
       onClose={() => router.push("/")}
       className={clsx("fixed inset-0 overflow-auto")}
+      style={{ zIndex }}
     >
       <Overlay isSelected={isOpen} />
       <motion.div

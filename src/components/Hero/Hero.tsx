@@ -18,25 +18,25 @@ export const Hero = memo(function _Hero() {
       id: 0,
       imageSrc: "/images/hero1.png",
       color: "#3C3D3F",
-      backgroundColor: "#E6E7E9",
+      backgroundColor: "linear-gradient(30deg, #E6E7E9, #CFD0D2)",
     },
     {
       id: 1,
       imageSrc: "/images/hero2.png",
       color: "#754D2E",
-      backgroundColor: "#EAD2C9",
+      backgroundColor: "linear-gradient(30deg, #EAD2C9, #B0BAC5)",
     },
     {
       id: 2,
       imageSrc: "/images/hero3.png",
       color: "#1E1F1D",
-      backgroundColor: "#DDDEE0",
+      backgroundColor: "linear-gradient(30deg, #DDDEE0, #B0AFAE)",
     },
     {
       id: 3,
       imageSrc: "/images/hero4.png",
       color: "#fff",
-      backgroundColor: "#040100",
+      backgroundColor: "linear-gradient(30deg, #040100, #2E1D1F)",
     },
   ];
   return (
@@ -46,8 +46,8 @@ export const Hero = memo(function _Hero() {
           <a
             href="#"
             className={clsx(
-              "my-2 h-3 w-3 cursor-pointer bg-slate-100",
-              currentItem === i && " bg-slate-400"
+              "my-2 h-3 w-3 cursor-pointer",
+              currentItem === i ? "bg-slate-400" : "bg-slate-200"
             )}
             key={data.id}
             tabIndex={0}
@@ -69,6 +69,7 @@ export const Hero = memo(function _Hero() {
         showIndicators={false}
         showThumbs={false}
         onChange={onChange}
+        swipeable={false}
       >
         {data.map(({ id, imageSrc, color, backgroundColor }, i) => (
           <HeroItem

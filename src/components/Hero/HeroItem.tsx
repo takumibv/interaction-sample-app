@@ -24,13 +24,13 @@ export const HeroItem: FC<Props> = memo(function _HeroItem({
   return (
     <div
       className="relative text-left w-full"
-      style={{ height: "calc(100vh - 4rem)", backgroundColor }}
+      style={{ height: "calc(100vh - 4rem)", background: backgroundColor }}
     >
       <AnimatePresence>
         {isSelected && (
           <motion.div
             key={`title-${id}`}
-            className="relative inline-block text-left text-9xl font-bold leading-tight"
+            className="relative inline-block text-left text-7xl sp:text-9xl font-bold leading-tight"
             style={{ left: "10%", top: "10%", color }}
           >
             <motion.p
@@ -67,8 +67,8 @@ export const HeroItem: FC<Props> = memo(function _HeroItem({
         {isSelected && (
           <motion.img
             key={`image-${id}`}
-            className="absolute right-0 bottom-0"
-            style={{ width: "35%" }}
+            className="absolute right-0 bottom-0 sp:!w-1/3"
+            // style={{ width: "35%" }}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
