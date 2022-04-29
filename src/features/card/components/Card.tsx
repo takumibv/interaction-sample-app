@@ -1,7 +1,7 @@
 import * as React from "react";
 import { memo } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { CardData } from "./types";
+import { CardData } from "../types";
 import Link from "next/link";
 import clsx from "clsx";
 import { closeSpring } from "./animations";
@@ -16,12 +16,12 @@ const Card = memo(function _Card({ id, backgroundColor, category, imageSrc, titl
     <motion.div className={clsx("relative aspect-video")} style={{ zIndex }}>
       <motion.div
         layoutId={`card-${id}`}
-        className={clsx("h-full pointer-events-none relative overflow-hidden")}
+        className={clsx("h-full pointer-events-none relative")}
         style={{ zIndex }}
       >
         <motion.div
           layoutId={`card-surface-${id}`}
-          className={clsx("relative bg-white rounded-2xl overflow-hidden h-full shadow-lg")}
+          className={clsx("relative bg-white overflow-hidden h-full rounded-2xl shadow-lg")}
           style={{ zIndex }}
         >
           <motion.div className="overflow-hidden" layoutId={`card-image-container-${id}`}>

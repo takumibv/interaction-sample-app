@@ -2,23 +2,16 @@ import * as React from "react";
 import { memo, useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { Dialog } from "@headlessui/react";
-import { CardData } from "./types";
+import { CardData } from "../types";
 import Link from "next/link";
 import clsx from "clsx";
-// import { ContentPlaceholder } from "./ContentPlaceholder";
-// import { Title } from "./Title";
-// import { Image } from "./Image";
 import { closeSpring } from "./animations";
 import { useRouter } from "next/router";
-// import { useWheelScroll } from "../utils/use-wheel-scroll";
 
 interface Props {
   isOpen: boolean;
   card?: CardData;
 }
-
-// Distance in pixels a user has to scroll a card down before we recognise
-// a swipe-to dismiss action.
 
 const CardModal = memo(function CardModal({
   isOpen,
@@ -31,7 +24,7 @@ const CardModal = memo(function CardModal({
     imageSrc: "",
   },
 }: Props) {
-  const { id, backgroundColor, pointOfInterest, category, imageSrc, title } = card;
+  const { id, category, imageSrc, title } = card;
 
   const router = useRouter();
 
