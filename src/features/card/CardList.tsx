@@ -15,7 +15,9 @@ const List = () => {
   const [currentCard, setCurrentCard] = React.useState<CardData | undefined>();
 
   useIsomorphicLayoutEffect(() => {
-    setCurrentCard(cardData.find((card) => asPath === `/#${card.id}`));
+    const hash = asPath.split("#")[1] ?? "";
+    console.log("useIsomorphicLayoutEffect", router, asPath, hash);
+    setCurrentCard(cardData.find((card) => hash === card.id));
   }, [asPath]);
 
   return (

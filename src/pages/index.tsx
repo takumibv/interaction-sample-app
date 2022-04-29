@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Hero, Message } from "../components/Hero";
 import CardList from "../features/card/CardList";
+import { url } from "../utils/config";
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
         <section>
           <div
             className="relative my-24 h-96 bg-fixed bg-center bg-no-repeat"
-            style={{ backgroundImage: "url(/images/cat3.jpg)" }}
+            style={{ backgroundImage: `url(${url("/images/cat3.jpg")})` }}
           ></div>
         </section>
         <div className="container mx-auto px-4">

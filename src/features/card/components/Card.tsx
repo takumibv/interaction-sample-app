@@ -5,11 +5,13 @@ import { CardData } from "../types";
 import Link from "next/link";
 import clsx from "clsx";
 import { closeSpring } from "./animations";
+import { useRouter } from "next/router";
 
 interface Props extends CardData {
   isSelected: boolean;
 }
 const Card = memo(function _Card({ id, backgroundColor, category, imageSrc, title }: Props) {
+  const router = useRouter();
   const zIndex = useMotionValue(0);
 
   return (
@@ -44,9 +46,16 @@ const Card = memo(function _Card({ id, backgroundColor, category, imageSrc, titl
             <h3 className="text-3xl">{title}</h3>
           </motion.div>
         </motion.div>
-        <Link href={`#${id}`} scroll={false}>
-          <a className={clsx("absolute w-full h-full inset-0 pointer-events-auto")}></a>
-        </Link>
+        {/* <Link href={`#${id}`} scroll={false}> */}
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            router.push(`#${id}`, undefined, { shallow: true });
+          }}
+          className={clsx("absolute w-full h-full inset-0 pointer-events-auto")}
+        ></a>
+        {/* </Link> */}
       </motion.div>
     </motion.div>
   );

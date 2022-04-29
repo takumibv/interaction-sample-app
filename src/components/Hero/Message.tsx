@@ -1,12 +1,13 @@
 import React from "react";
 import { memo } from "react";
+import { url } from "../../utils/config";
 
 export const Message = memo(function _Message() {
   return (
     <section>
       <div className="grid grid-cols-1 tablet:grid-cols-2">
         <div className="h-full order-none">
-          <img className="object-cover w-full h-full" src="/images/cat.jpg" alt="" />
+          <img className="object-cover w-full h-full" src={url("/images/cat.jpg")} alt="" />
         </div>
         <div className="p-8 flex items-center order-first tablet:order-none">
           <div className="mx-auto max-w-120">

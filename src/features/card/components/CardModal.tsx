@@ -34,7 +34,7 @@ const CardModal = memo(function CardModal({
     <Dialog
       as={motion.div}
       open={isOpen}
-      onClose={() => router.push("/")}
+      onClose={() => router.push("/", undefined, { shallow: true })}
       className={clsx("fixed inset-0 overflow-auto")}
       style={{ zIndex }}
     >

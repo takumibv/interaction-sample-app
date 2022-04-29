@@ -1,3 +1,4 @@
+import { url } from "../../utils/config";
 import { CardData } from "./types";
 
 export const cardData: CardData[] = [
@@ -8,7 +9,7 @@ export const cardData: CardData[] = [
     title: "5 Food Apps Delivering the Best of Your City",
     pointOfInterest: 80,
     backgroundColor: "#814A0E",
-    imageSrc: "/images/cat.jpg",
+    imageSrc: url("/images/cat.jpg"),
   },
   // Photo by Dennis Brendel on Unsplash
   {
@@ -17,7 +18,7 @@ export const cardData: CardData[] = [
     title: "Arrange Your Apple Devices for the Gram",
     pointOfInterest: 200,
     backgroundColor: "#959684",
-    imageSrc: "/images/cat2.jpg",
+    imageSrc: url("/images/cat2.jpg"),
   },
   // Photo by Alessandra Caretto on Unsplash
   {
@@ -26,7 +27,7 @@ export const cardData: CardData[] = [
     title: "Map Apps for the Superior Mode of Transport",
     pointOfInterest: 260,
     backgroundColor: "#5DBCD2",
-    imageSrc: "/images/cat3.jpg",
+    imageSrc: url("/images/cat3.jpg"),
   },
   // Photo by Taneli Lahtinen on Unsplash
   {
@@ -35,6 +36,6 @@ export const cardData: CardData[] = [
     title: "Our Pick of Apps to Help You Escape From Apps",
     pointOfInterest: 200,
     backgroundColor: "#8F986D",
-    imageSrc: "/images/cat4.jpg",
+    imageSrc: url("/images/cat4.jpg"),
   },
 ];

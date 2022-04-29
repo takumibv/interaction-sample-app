@@ -1,7 +1,10 @@
 
-アニメーションサンプルサイト
+ペット用品サイトサンプルサイト
 
-使用フレームワーク・プラグイン
+### 参考にしたサイト
+https://www.inupathy.com/
+
+### 使用フレームワーク・プラグイン
 - [Next.js](https://nextjs.org/)
 - [Framer Motion](https://www.framer.com/developers/)
 - [headless UI](https://headlessui.dev/)

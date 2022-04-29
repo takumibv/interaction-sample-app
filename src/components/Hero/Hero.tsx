@@ -6,35 +6,35 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { HeroItem } from ".";
 import { motion } from "framer-motion";
+import { url } from "../../utils/config";
 
 export const Hero = memo(function _Hero() {
   const [currentItem, setCurrentItem] = React.useState(0);
   const onChange = (index: number, item: ReactNode) => {
-    console.log(index, item);
     currentItem !== index && setCurrentItem(index);
   };
   const data = [
     {
       id: 0,
-      imageSrc: "/images/hero1.png",
+      imageSrc: url("/images/hero1.png"),
       color: "#3C3D3F",
       backgroundColor: "linear-gradient(30deg, #E6E7E9, #CFD0D2)",
     },
     {
       id: 1,
-      imageSrc: "/images/hero2.png",
+      imageSrc: url("/images/hero2.png"),
       color: "#754D2E",
       backgroundColor: "linear-gradient(30deg, #EAD2C9, #B0BAC5)",
     },
     {
       id: 2,
-      imageSrc: "/images/hero3.png",
+      imageSrc: url("/images/hero3.png"),
       color: "#1E1F1D",
       backgroundColor: "linear-gradient(30deg, #DDDEE0, #B0AFAE)",
     },
     {
       id: 3,
-      imageSrc: "/images/hero4.png",
+      imageSrc: url("/images/hero4.png"),
       color: "#fff",
       backgroundColor: "linear-gradient(30deg, #040100, #2E1D1F)",
     },
