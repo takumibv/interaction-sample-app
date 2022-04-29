@@ -40,7 +40,7 @@ export const HeroItem: FC<Props> = memo(function _HeroItem({
               exit={{ opacity: 0, x: 300 }}
               transition={{ type: "spring", stiffness: 50, delay: 0.3 }}
             >
-              How
+              What
             </motion.p>
             <motion.p
               key={`title-text-${id}-2`}
@@ -49,7 +49,7 @@ export const HeroItem: FC<Props> = memo(function _HeroItem({
               exit={{ opacity: 0, x: 300 }}
               transition={{ type: "spring", stiffness: 50, delay: 0.35 }}
             >
-              are you
+              do you
             </motion.p>
             <motion.p
               key={`title-text-${id}-3`}
@@ -58,7 +58,7 @@ export const HeroItem: FC<Props> = memo(function _HeroItem({
               exit={{ opacity: 0, x: 300 }}
               transition={{ type: "spring", stiffness: 50, delay: 0.4 }}
             >
-              feeling?
+              want to say?
             </motion.p>
           </motion.div>
         )}
@@ -68,7 +68,6 @@ export const HeroItem: FC<Props> = memo(function _HeroItem({
           <motion.img
             key={`image-${id}`}
             className="absolute right-0 bottom-0 sp:!w-1/3"
-            // style={{ width: "35%" }}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
